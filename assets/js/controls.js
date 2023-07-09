@@ -1,3 +1,5 @@
+import sounds from "./sounds.js"
+
 export default function ({
   btnPlay,
   btnPause,
@@ -11,6 +13,7 @@ export default function ({
     btnPlay.classList.add("hide")
     btnPause.classList.remove("hide")
     timerCountdown()
+    sounds().pressButton()
   }
 
   function buttonPause() {
