@@ -47,13 +47,21 @@ export default function ({
   }
 
   function incrementFive() {
-    minutes = minutes + 5
-    updateDisplay(minutes, 0)
+    let checkIfIsBigger = minutes < 120
+
+    if (checkIfIsBigger) {
+      minutes = minutes + 5
+      updateDisplay(minutes, 0)
+    }
   }
 
   function decrementFive() {
-    minutes = minutes - 5
-    updateDisplay(minutes, 0)
+    let checkIfIsSmaller = minutes > 5
+
+    if (checkIfIsSmaller) {
+      minutes = minutes - 5
+      updateDisplay(minutes, 0)
+    }
   }
 
   return {

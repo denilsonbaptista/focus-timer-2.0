@@ -7,21 +7,35 @@ import {
 } from "./elements.js"
 
 export default function ({ sounds, controls, timer }) {
-  btnPlay.addEventListener("click", () => {
+  function play() {
     sounds.pressButton()
     controls.buttonPlay()
     timer.countdown()
-  })
-  btnPause.addEventListener("click", () => {
+  }
+
+  function pause() {
     sounds.pressButton()
     controls.buttonPause()
     timer.hold()
-  })
-  btnStop.addEventListener("click", () => {
+  }
+
+  function stop() {
     controls.reset()
     timer.hold()
     timer.updateDisplay()
-  })
-  btnIncrement.addEventListener("click", timer.incrementFive)
-  btnDecrement.addEventListener("click", timer.decrementFive)
+  }
+
+  function increment() {
+    timer.incrementFive()
+  }
+
+  function decrement() {
+    timer.decrementFive()
+  }
+
+  btnPlay.addEventListener("click", play)
+  btnPause.addEventListener("click", pause)
+  btnStop.addEventListener("click", stop)
+  btnIncrement.addEventListener("click", increment)
+  btnDecrement.addEventListener("click", decrement)
 }
