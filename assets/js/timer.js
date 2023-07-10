@@ -1,4 +1,9 @@
-export default function ({ secondsDisplay, minutesDisplay }) {
+export default function ({
+  secondsDisplay,
+  minutesDisplay,
+  reset,
+  soundKichenTimer,
+}) {
   let timeTimerInterval
   let minutes = Number(minutesDisplay.textContent)
 
@@ -21,6 +26,8 @@ export default function ({ secondsDisplay, minutesDisplay }) {
       if (isFinished) {
         hold()
         updateDisplay()
+        reset()
+        soundKichenTimer()
         return
       }
 
