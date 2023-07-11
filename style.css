@@ -6,13 +6,15 @@
   box-sizing: border-box;
 }
 
-html {
+:root {
   font-size: 62.5%;
+
+  --primary-color: #323238;
 }
 
 body {
   font-family: "Roboto", sans-serif;
-  color: #323238;
+  color: var(--primary-color);
 
   display: grid;
   height: 100vh;
@@ -21,10 +23,18 @@ body {
 main {
   align-self: center;
   justify-self: center;
+
+  display: flex;
+  gap: 20rem;
 }
 
 .hide {
   display: none;
+}
+
+.timer {
+  display: grid;
+  place-content: center;
 }
 
 .time {
@@ -36,9 +46,64 @@ main {
 .controls {
   display: flex;
   justify-content: space-between;
+  padding: 0 1rem;
 }
 
 button {
   border: none;
   background: none;
+
+  cursor: pointer;
+}
+
+.sounds {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.2rem;
+}
+
+.sounds svg .card-forest {
+  fill: #127369;
+}
+
+.sounds svg .icon-forest {
+  fill: #ffffff;
+}
+
+.sounds svg .card-rain {
+  fill: #02799d;
+}
+
+.sounds svg .icon-rain {
+  fill: #ffffff;
+}
+
+.sounds svg .card-coffee-machine {
+  fill: #8c6249;
+}
+
+.sounds svg .icon-coffee-machine {
+  fill: #ffffff;
+}
+
+.sounds svg .card-fireplace {
+  fill: #f2a30f;
+}
+
+.sounds svg .icon-fireplace {
+  fill: #ffffff;
+}
+
+.animation-card {
+  animation: side-to-front 700ms ease-in-out;
+}
+
+@keyframes side-to-front {
+  0% {
+    transform: rotateY(90deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
 }
