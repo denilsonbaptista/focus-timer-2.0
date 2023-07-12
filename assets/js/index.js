@@ -7,6 +7,8 @@ import {
   secondsDisplay,
   btnPlay,
   btnPause,
+  playForest,
+  stopForest,
 } from "./elements.js"
 
 const sounds = Sounds()
@@ -14,6 +16,8 @@ const sounds = Sounds()
 const controls = Controls({
   btnPlay,
   btnPause,
+  playForest,
+  stopForest,
 })
 
 const timer = Timer({

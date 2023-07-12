@@ -4,6 +4,8 @@ import {
   btnStop,
   btnIncrement,
   btnDecrement,
+  playForest,
+  stopForest,
 } from "./elements.js"
 
 export default function ({ sounds, controls, timer }) {
@@ -33,9 +35,21 @@ export default function ({ sounds, controls, timer }) {
     timer.decrementFive()
   }
 
+  function playForestSound() {
+    controls.playForestSound()
+    sounds.soundForestPlay()
+  }
+
+  function stopForestSound() {
+    controls.stopForestSound()
+    sounds.soundForestStop()
+  }
+
   btnPlay.addEventListener("click", play)
   btnPause.addEventListener("click", pause)
   btnStop.addEventListener("click", stop)
   btnIncrement.addEventListener("click", increment)
   btnDecrement.addEventListener("click", decrement)
+  playForest.addEventListener("click", playForestSound)
+  stopForest.addEventListener("click", stopForestSound)
 }

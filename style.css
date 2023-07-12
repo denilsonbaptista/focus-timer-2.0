@@ -62,39 +62,7 @@ button {
   gap: 3.2rem;
 }
 
-.sounds svg .card-forest {
-  fill: #127369;
-}
-
-.sounds svg .icon-forest {
-  fill: #ffffff;
-}
-
-.sounds svg .card-rain {
-  fill: #02799d;
-}
-
-.sounds svg .icon-rain {
-  fill: #ffffff;
-}
-
-.sounds svg .card-coffee-machine {
-  fill: #8c6249;
-}
-
-.sounds svg .icon-coffee-machine {
-  fill: #ffffff;
-}
-
-.sounds svg .card-fireplace {
-  fill: #f2a30f;
-}
-
-.sounds svg .icon-fireplace {
-  fill: #ffffff;
-}
-
-.animation-card {
+.stop-forest {
   animation: side-to-front 700ms ease-in-out;
 }
 

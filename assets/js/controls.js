@@ -1,4 +1,4 @@
-export default function ({ btnPlay, btnPause }) {
+export default function ({ btnPlay, btnPause, playForest, stopForest }) {
   function reset() {
     btnPause.classList.add("hide")
     btnPlay.classList.remove("hide")
@@ -14,9 +14,21 @@ export default function ({ btnPlay, btnPause }) {
     btnPlay.classList.remove("hide")
   }
 
+  function playForestSound() {
+    playForest.classList.add("hide")
+    stopForest.classList.remove("hide")
+  }
+
+  function stopForestSound() {
+    playForest.classList.remove("hide")
+    stopForest.classList.add("hide")
+  }
+
   return {
     buttonPlay,
     buttonPause,
     reset,
+    playForestSound,
+    stopForestSound,
   }
 }
