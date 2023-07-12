@@ -6,6 +6,12 @@ import {
   btnDecrement,
   playForest,
   stopForest,
+  playRain,
+  stopRain,
+  playCoffeeMachine,
+  stopCoffeeMachine,
+  playFireplace,
+  stopFireplace,
 } from "./elements.js"
 
 export default function ({ sounds, controls, timer }) {
@@ -38,11 +44,53 @@ export default function ({ sounds, controls, timer }) {
   function playForestSound() {
     controls.playForestSound()
     sounds.soundForestPlay()
+    stopRainSound()
+    stopCoffeeMachineSound()
+    stopFireplaceSound()
   }
 
   function stopForestSound() {
     controls.stopForestSound()
     sounds.soundForestStop()
+  }
+
+  function playRainSound() {
+    controls.playRainSound()
+    sounds.soundRainPlay()
+    stopForestSound()
+    stopCoffeeMachineSound()
+    stopFireplaceSound()
+  }
+
+  function stopRainSound() {
+    controls.stopRainSound()
+    sounds.soundRainStop()
+  }
+
+  function playCoffeeMachineSound() {
+    controls.playCoffeeMachineSound()
+    sounds.soundCoffeeMachinePlay()
+    stopForestSound()
+    stopRainSound()
+    stopFireplaceSound()
+  }
+
+  function stopCoffeeMachineSound() {
+    controls.stopCoffeeMachineSound()
+    sounds.soundCoffeeMachineStop()
+  }
+
+  function playFireplaceSound() {
+    controls.playFireplaceSound()
+    sounds.soundFireplacePlay()
+    stopForestSound()
+    stopRainSound()
+    stopCoffeeMachineSound()
+  }
+
+  function stopFireplaceSound() {
+    controls.stopFireplaceSound()
+    sounds.soundFireplaceStop()
   }
 
   btnPlay.addEventListener("click", play)
@@ -52,4 +100,10 @@ export default function ({ sounds, controls, timer }) {
   btnDecrement.addEventListener("click", decrement)
   playForest.addEventListener("click", playForestSound)
   stopForest.addEventListener("click", stopForestSound)
+  playRain.addEventListener("click", playRainSound)
+  stopRain.addEventListener("click", stopRainSound)
+  playCoffeeMachine.addEventListener("click", playCoffeeMachineSound)
+  stopCoffeeMachine.addEventListener("click", stopCoffeeMachineSound)
+  playFireplace.addEventListener("click", playFireplaceSound)
+  stopFireplace.addEventListener("click", stopFireplaceSound)
 }

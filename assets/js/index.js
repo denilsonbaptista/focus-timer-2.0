@@ -9,6 +9,12 @@ import {
   btnPause,
   playForest,
   stopForest,
+  playRain,
+  stopRain,
+  playCoffeeMachine,
+  stopCoffeeMachine,
+  playFireplace,
+  stopFireplace,
 } from "./elements.js"
 
 const sounds = Sounds()
@@ -18,6 +24,12 @@ const controls = Controls({
   btnPause,
   playForest,
   stopForest,
+  playRain,
+  stopRain,
+  playCoffeeMachine,
+  stopCoffeeMachine,
+  playFireplace,
+  stopFireplace,
 })
 
 const timer = Timer({

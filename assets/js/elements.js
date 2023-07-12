@@ -14,7 +14,6 @@ const stopCoffeeMachine = document.querySelector(".stop-coffee-machine")
 const playFireplace = document.querySelector(".play-fireplace")
 const stopFireplace = document.querySelector(".stop-fireplace")
 
-
 export {
   minutesDisplay,
   secondsDisplay,
@@ -25,4 +24,10 @@ export {
   btnDecrement,
   playForest,
   stopForest,
+  playRain,
+  stopRain,
+  playCoffeeMachine,
+  stopCoffeeMachine,
+  playFireplace,
+  stopFireplace,
 }
