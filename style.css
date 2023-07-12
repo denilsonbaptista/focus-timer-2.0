@@ -62,7 +62,10 @@ button {
   gap: 3.2rem;
 }
 
-.stop-forest {
+.stop-forest,
+.stop-rain,
+.stop-coffee-machine,
+.stop-fireplace {
   animation: side-to-front 700ms ease-in-out;
 }
 
