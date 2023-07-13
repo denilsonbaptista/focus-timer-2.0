@@ -73,6 +73,23 @@ button {
   justify-content: space-between;
 
   height: 15.2rem;
+  cursor: pointer;
+}
+
+.sounds .sound-forest-stop .card {
+  background: #127369;
+}
+
+.sounds .sound-rain-stop .card {
+  background: #02799D;
+}
+
+.sounds .sound-coffee-machine-stop .card {
+  background: #8C6249;
+}
+
+.sounds .sound-fireplace-stop .card {
+  background: #F2A30F;
 }
 
 .sounds .card input {
@@ -93,12 +110,13 @@ button {
 
   background-color: #323238;
   border-radius: 50%;
+  cursor: pointer;
 }
 
-.stop-forest,
-.stop-rain,
-.stop-coffee-machine,
-.stop-fireplace {
+.sound-forest-stop,
+.sound-rain-stop,
+.sound-coffee-machine-stop,
+.sound-fireplace-stop {
   animation: side-to-front 700ms ease-in-out;
 }
 
