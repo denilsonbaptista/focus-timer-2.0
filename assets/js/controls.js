@@ -1,15 +1,20 @@
 export default function ({
   btnPlay,
   btnPause,
-  playForest,
-  stopForest,
-  playRain,
-  stopRain,
-  playCoffeeMachine,
-  stopCoffeeMachine,
-  playFireplace,
-  stopFireplace,
 }) {
+  const soundForestPlay = document.querySelector(".sound-forest-play")
+  const soundForestStop = document.querySelector(".sound-forest-stop")
+  const soundRainPlay = document.querySelector(".sound-rain-play")
+  const soundRainStop = document.querySelector(".sound-rain-stop")
+  const soundFireplacePlay = document.querySelector(".sound-fireplace-play")
+  const soundFireplaceStop = document.querySelector(".sound-fireplace-stop")
+  const soundCoffeeMachinePlay = document.querySelector(
+    ".sound-coffee-machine-play"
+  )
+  const soundCoffeeMachineStop = document.querySelector(
+    ".sound-coffee-machine-stop"
+  )
+
   function reset() {
     btnPause.classList.add("hide")
     btnPlay.classList.remove("hide")
@@ -26,43 +31,43 @@ export default function ({
   }
 
   function playForestSound() {
-    playForest.classList.add("hide")
-    stopForest.classList.remove("hide")
+    soundForestPlay.classList.add("hide")
+    soundForestStop.classList.remove("hide")
   }
 
   function stopForestSound() {
-    playForest.classList.remove("hide")
-    stopForest.classList.add("hide")
+    soundForestPlay.classList.remove("hide")
+    soundForestStop.classList.add("hide")
   }
 
   function playRainSound() {
-    playRain.classList.add("hide")
-    stopRain.classList.remove("hide")
+    soundRainPlay.classList.add("hide")
+    soundRainStop.classList.remove("hide")
   }
 
   function stopRainSound() {
-    playRain.classList.remove("hide")
-    stopRain.classList.add("hide")
+    soundRainPlay.classList.remove("hide")
+    soundRainStop.classList.add("hide")
   }
 
   function playCoffeeMachineSound() {
-    playCoffeeMachine.classList.add("hide")
-    stopCoffeeMachine.classList.remove("hide")
+    soundCoffeeMachinePlay.classList.add("hide")
+    soundCoffeeMachineStop.classList.remove("hide")
   }
 
   function stopCoffeeMachineSound() {
-    playCoffeeMachine.classList.remove("hide")
-    stopCoffeeMachine.classList.add("hide")
+    soundCoffeeMachinePlay.classList.remove("hide")
+    soundCoffeeMachineStop.classList.add("hide")
   }
 
   function playFireplaceSound() {
-    playFireplace.classList.add("hide")
-    stopFireplace.classList.remove("hide")
+    soundFireplacePlay.classList.add("hide")
+    soundFireplaceStop.classList.remove("hide")
   }
 
   function stopFireplaceSound() {
-    playFireplace.classList.remove("hide")
-    stopFireplace.classList.add("hide")
+    soundFireplacePlay.classList.remove("hide")
+    soundFireplaceStop.classList.add("hide")
   }
 
   return {
