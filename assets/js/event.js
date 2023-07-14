@@ -12,6 +12,10 @@ import {
   stopCoffeeMachine,
   playFireplace,
   stopFireplace,
+  forestVolume,
+  rainVolume,
+  coffeeMachineVolume,
+  fireplaceVolume,
 } from "./elements.js"
 
 export default function ({ sounds, controls, timer }) {
@@ -93,6 +97,22 @@ export default function ({ sounds, controls, timer }) {
     sounds.soundFireplaceStop()
   }
 
+  function forestSoundVolume() {
+    sounds.forestSoundVolume(forestVolume.value)
+  }
+
+  function rainSoundVolume() {
+    sounds.rainSoundVolume(rainVolume.value)
+  }
+
+  function coffeeMachineSoundVolume() {
+    sounds.coffeeMachineSoundVolume(coffeeMachineVolume.value)
+  }
+
+  function fireplaceSoundVolume() {
+    sounds.fireplaceSoundVolume(fireplaceVolume.value)
+  }
+
   btnPlay.addEventListener("click", play)
   btnPause.addEventListener("click", pause)
   btnStop.addEventListener("click", stop)
@@ -106,4 +126,8 @@ export default function ({ sounds, controls, timer }) {
   stopCoffeeMachine.addEventListener("click", stopCoffeeMachineSound)
   playFireplace.addEventListener("click", playFireplaceSound)
   stopFireplace.addEventListener("click", stopFireplaceSound)
+  forestVolume.addEventListener("input", forestSoundVolume)
+  rainVolume.addEventListener("input", rainSoundVolume)
+  coffeeMachineVolume.addEventListener("input", coffeeMachineSoundVolume)
+  fireplaceVolume.addEventListener("input", fireplaceSoundVolume)
 }

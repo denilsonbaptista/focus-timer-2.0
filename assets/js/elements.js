@@ -13,6 +13,10 @@ const playCoffeeMachine = document.querySelector(".play-coffee-machine")
 const stopCoffeeMachine = document.querySelector(".stop-coffee-machine")
 const playFireplace = document.querySelector(".play-fireplace")
 const stopFireplace = document.querySelector(".stop-fireplace")
+const forestVolume = document.getElementById("forest-volume")
+const rainVolume = document.getElementById("rain-volume")
+const coffeeMachineVolume = document.getElementById("coffee-machine-volume")
+const fireplaceVolume = document.getElementById("fireplace-volume")
 
 export {
   minutesDisplay,
@@ -30,4 +34,8 @@ export {
   stopCoffeeMachine,
   playFireplace,
   stopFireplace,
+  forestVolume,
+  rainVolume,
+  coffeeMachineVolume,
+  fireplaceVolume,
 }

@@ -56,6 +56,22 @@ export default function () {
     soundFireplace.pause()
   }
 
+  function forestSoundVolume(volume) {
+    soundForest.volume = volume
+  }
+
+  function rainSoundVolume(volume) {
+    soundRain.volume = volume
+  }
+
+  function coffeeMachineSoundVolume(volume) {
+    soundCoffeeMachine.volume = volume
+  }
+
+  function fireplaceSoundVolume(volume) {
+    soundFireplace.volume = volume
+  }
+
   return {
     pressButton,
     kichenTimer,
@@ -67,5 +83,9 @@ export default function () {
     soundCoffeeMachineStop,
     soundFireplacePlay,
     soundFireplaceStop,
+    forestSoundVolume,
+    rainSoundVolume,
+    coffeeMachineSoundVolume,
+    fireplaceSoundVolume,
   }
 }
