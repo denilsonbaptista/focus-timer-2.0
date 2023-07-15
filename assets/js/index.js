@@ -15,6 +15,8 @@ import {
   stopCoffeeMachine,
   playFireplace,
   stopFireplace,
+  btnLight,
+  btnDark,
 } from "./elements.js"
 
 const sounds = Sounds()
@@ -30,6 +32,8 @@ const controls = Controls({
   stopCoffeeMachine,
   playFireplace,
   stopFireplace,
+  btnLight,
+  btnDark,
 })
 
 const timer = Timer({

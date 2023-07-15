@@ -16,6 +16,8 @@ import {
   rainVolume,
   coffeeMachineVolume,
   fireplaceVolume,
+  btnLight,
+  btnDark,
 } from "./elements.js"
 
 export default function ({ sounds, controls, timer }) {
@@ -130,4 +132,6 @@ export default function ({ sounds, controls, timer }) {
   rainVolume.addEventListener("input", rainSoundVolume)
   coffeeMachineVolume.addEventListener("input", coffeeMachineSoundVolume)
   fireplaceVolume.addEventListener("input", fireplaceSoundVolume)
+  btnLight.addEventListener("click", controls.buttonLight)
+  btnDark.addEventListener("click", controls.buttonDark)
 }

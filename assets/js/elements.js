@@ -17,6 +17,8 @@ const forestVolume = document.getElementById("forest-volume")
 const rainVolume = document.getElementById("rain-volume")
 const coffeeMachineVolume = document.getElementById("coffee-machine-volume")
 const fireplaceVolume = document.getElementById("fireplace-volume")
+const btnLight = document.querySelector(".sun-light")
+const btnDark = document.querySelector(".moon-dark")
 
 export {
   minutesDisplay,
@@ -38,4 +40,6 @@ export {
   rainVolume,
   coffeeMachineVolume,
   fireplaceVolume,
+  btnLight,
+  btnDark,
 }
