@@ -35,6 +35,16 @@ body {
   background-color: var(--bg-primary-color);
 }
 
+main {
+  align-self: center;
+  justify-self: center;
+
+  display: flex;
+  gap: 20rem;
+
+  position: relative;
+}
+
 .toggle-dark-light {
   position: absolute;
   right: -13rem;
@@ -44,16 +54,6 @@ body {
 button i {
   font-size: 4.4rem;
   color: var(--primary-color);
-}
-
-main {
-  align-self: center;
-  justify-self: center;
-
-  display: flex;
-  gap: 20rem;
-
-  position: relative;
 }
 
 svg path {
@@ -159,5 +159,41 @@ button {
 
   100% {
     transform: rotate(0deg);
+  }
+}
+
+@media (max-width: 920px) {
+  body {
+    position: relative;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 7rem;
+
+    position: initial;
+  }
+
+  .toggle-dark-light {
+    position: absolute;
+    right: 3rem;
+    top: 3rem;
+  }
+}
+
+@media (max-width: 1111px) {
+  body {
+    position: relative;
+  }
+
+  main {
+    position: initial;
+  }
+
+  .toggle-dark-light {
+    position: absolute;
+    right: 3rem;
+    top: 3rem;
   }
 }
