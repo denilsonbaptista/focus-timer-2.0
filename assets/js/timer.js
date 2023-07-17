@@ -6,6 +6,7 @@ export default function ({
 }) {
   let timeTimerInterval
   let minutes = Number(minutesDisplay.textContent)
+  let title = document.querySelector("title")
 
   function updateDisplay(newMinutes, seconds) {
     newMinutes = newMinutes === undefined ? minutes : newMinutes
@@ -13,6 +14,10 @@ export default function ({
 
     minutesDisplay.textContent = String(newMinutes).padStart(2, "0")
     secondsDisplay.textContent = String(seconds).padStart(2, "0")
+
+    title.innerText = `${newMinutes.toString().padStart(2, "0")}:${seconds
+      .toString()
+      .padStart(2, "0")} - Time to focus!`
   }
 
   function countdown() {
